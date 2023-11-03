@@ -2,8 +2,8 @@
 title: "Title of the Memoir"
 author: "Authors' names"
 date: "`r Sys.Date()`"
-url: https://GitHubID.github.io/Repository/
-github-repo: GitHubID/Repository
+url: https://EricMarcon.github.io/ci_memoir/
+github-repo: EricMarcon/ci_memoir
 description: "Bookdown template based on LaTeX memoir class"
 cover-image: "images/logo.png"
 # Title page...
