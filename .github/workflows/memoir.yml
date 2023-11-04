@@ -21,7 +21,8 @@ jobs:
         run: |
           options(pkgType = "binary")
           options(install.packages.check.source = "no")
-          install.packages(c("distill", "downlit", "memoiR", "rmdformats", "tinytex"))
+          install.packages("pak")
+          pak::pkg_install(c("distill", "downlit", "memoiR", "rmdformats", "tinytex"))
           tinytex::install_tinytex(bundle = "TinyTeX")
           tinytex::tlmgr_install("hyphen-french")
           tinytex::tlmgr_install("hyphen-italian")

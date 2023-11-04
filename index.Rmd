@@ -115,18 +115,13 @@ csquotes: true
 
 ```{r DoNotModify, include=FALSE}
 ### Utilities. Do not modify.
-# Installation of packages if necessary
-InstallPackages <- function(Packages) {
-  InstallPackage <- function(Package) {
-    if (!Package %in% installed.packages()[, 1]) {
-      install.packages(Package, repos="https://cran.rstudio.com/")
-    }
-  }
-  invisible(sapply(Packages, InstallPackage))
+# pak to manage packages
+if (!"pak" %in% installed.packages()[, 1]) {
+  install.packages("pak", repos="https://cran.rstudio.com/")
 }
 
 # Basic packages
-InstallPackages(c("bookdown", "formatR", "kableExtra", "magick", "ragg"))
+pak::pkg_install(c("bookdown", "formatR", "kableExtra", "magick", "ragg"))
 
 # kableExtra must be loaded 
 if (knitr::opts_knit$get("rmarkdown.pandoc.to") == "docx") {
@@ -182,9 +177,7 @@ if (rmarkdown::metadata$largemargins)
 ```{r Options, include=FALSE}
 ### Customized options for this document
 # Add necessary packages here
-Packages <- c("tidyverse")
-# Install them
-InstallPackages(Packages)
+pak::pkg_install("tidyverse")
 # Create packages.bib file to reference them as @R-package
 knitr::write_bib(Packages, file="packages.bib")
 
