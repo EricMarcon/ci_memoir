@@ -178,8 +178,6 @@ if (rmarkdown::metadata$largemargins)
 ### Customized options for this document
 # Add necessary packages here
 pak::pkg_install("tidyverse")
-# Create packages.bib file to reference them as @R-package
-knitr::write_bib(Packages, file="packages.bib")
 
 # knitr options
 knitr::opts_chunk$set(
