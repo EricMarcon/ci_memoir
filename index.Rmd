@@ -217,8 +217,6 @@ The **bookdown** package must be installed from CRAN or GitHub:
 
 ```{r eval=FALSE}
 install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
 ```
 
 The book is organized in chapters. 
