@@ -59,13 +59,13 @@
 \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
 \newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
 \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
 \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
 \newcommand{\BuiltInTok}[1]{#1}
 \newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
 \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
 \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
 \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
 \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
@@ -73,7 +73,7 @@
 \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
 \newcommand{\ExtensionTok}[1]{#1}
 \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
 \newcommand{\ImportTok}[1]{#1}
 \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
@@ -82,7 +82,7 @@
 \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
 \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
 \newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
 \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
@@ -393,7 +393,7 @@
 
 \author{Authors' names}
 
-\date{2023-12-19}
+\date{2025-09-10}
 
 
 % Include headers (preamble.tex) here
@@ -475,8 +475,7 @@ Leave an empty line for line breaks.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \LargeMargins
-\hypertarget{introduction}{%
-\chapter*{Introduction}\label{introduction}}
+\chapter*{Introduction}\label{introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
 This document allows you to create a book in PDF format (and ePub format) at the same time as an HTML version to be published on the web.
@@ -513,8 +512,7 @@ The button's drop-down list allows you to create all documents or limit yourself
 
 \mainmatter
 
-\hypertarget{getting_started}{%
-\chapter{Getting Started}\label{getting_started}}
+\chapter{Getting Started}\label{getting_started}
 
 \emph{RStudio} in version higher than 1 must be used.
 The \textbf{bookdown} package must be installed.
@@ -529,8 +527,7 @@ The \emph{references.bib} file contains the bibliography.
 
 The basic parameters of the project must be entered in the following files.
 
-\hypertarget{index}{%
-\section{index.Rmd}\label{index}}
+\section{index.Rmd}\label{index}
 
 In the file header, enter the title of the work and the name of the author(s).
 
@@ -656,8 +653,7 @@ Some may be added to the header:
 For a student thesis, prepare the cover page with Word, Powerpoint or a DTP program and save it in PDF format, in A4 size.
 Only the first page of the PDF is used.
 
-\hypertarget{bookdown.yml}{%
-\section{\_bookdown.yml}\label{bookdown.yml}}
+\section{\_bookdown.yml}\label{bookdown.yml}
 
 Enter the name of the Rmd file that will be the result of the merging of all chapters and choose if it should be destroyed after use.
 It will also be the name of the PDF and Word files.
@@ -678,8 +674,7 @@ repo: "https://github.com/GitHubID/Repository"
 The knitted files are stored in the output directory.
 \texttt{docs} is the good choice for GitHub Pages.
 
-\hypertarget{output.yml}{%
-\section{\_output.yml}\label{output.yml}}
+\section{\_output.yml}\label{output.yml}
 
 Customize the table of contents in HTML format.
 
@@ -699,8 +694,7 @@ bookdown::bs4_book:
  repo: https://github.com/GitHubID/Repository
 \end{verbatim}
 
-\hypertarget{multilingual-documents}{%
-\section{Multilingual documents}\label{multilingual-documents}}
+\section{Multilingual documents}\label{multilingual-documents}
 
 Languages are declared in the document header.
 
@@ -718,8 +712,7 @@ The language change in basic markdown format,
 is not supported by R Markdown.
 See the correct syntax in section \ref{sec:languages}.
 
-\hypertarget{syntax}{%
-\chapter{Syntax}\label{syntax}}
+\chapter{Syntax}\label{syntax}
 
 \scriptsize
 
@@ -767,8 +760,7 @@ Appendices are introduced as a special part:
 # Title of the first appendix
 \end{verbatim}
 
-\hypertarget{write}{%
-\section{Write}\label{write}}
+\section{Write}\label{write}
 
 The main features of Markdown are summarized here.
 A quick and complete training is offered by RStudio\footnote{\url{https://rmarkdown.rstudio.com/lesson-1.html}}.
@@ -788,8 +780,7 @@ Last, numbered lists are created in the same way by replacing the hyphens by num
 
 In the text, the italicized parts are surrounded by a star or an underscore (\texttt{*italic*}), while two stars mark the bold.
 
-\hypertarget{r-code}{%
-\section{R code}\label{r-code}}
+\section{R code}\label{r-code}
 
 R code is included in code chunks (\emph{code chunks}) that are easily created by clicking on the \enquote{Insert a new code chunk} button above the source code window in RStudio.
 They start and end with three quotation marks on a new line.
@@ -833,8 +824,7 @@ When it is \texttt{TRUE}, the code is printed as follows
 
 \normalsize
 
-\hypertarget{figures}{%
-\section{Figures}\label{figures}}
+\section{Figures}\label{figures}
 
 \scriptsize
 
@@ -906,8 +896,7 @@ They should not contain bibliographic references or references to the figures ma
 Figures that are not created by R but come from files are embedded in a piece of code by the \texttt{include\_graphics()} function whose argument is the file containing the image to be displayed.
 Always place these files in the \texttt{images} folder for good organization.
 
-\hypertarget{tables}{%
-\section{Tables}\label{tables}}
+\section{Tables}\label{tables}
 
 The horizontal - and vertical separators \textbar{} allow to draw a table according to the Markdown syntax, but it is not the best method.
 
@@ -930,7 +919,7 @@ The \texttt{kable} function in the \emph{knitr} package prepares the table for d
 \end{Shaded}
 
 \begin{table}
-
+\centering
 \caption{\label{tab:kable}Table created by R}
 \centering
 \begin{tabular}[t]{rrrrl}
@@ -959,8 +948,7 @@ Since the table contains mathematics (in the name of the first column), the \tex
 The \texttt{bootstrap\_options\ =\ "striped"} style option provides more readable tables in HTML.
 Last, the \texttt{full\_width\ =\ FALSE} option allows you to adjust the width of the table to its content instead of occupying all the available width.
 
-\hypertarget{maths}{%
-\section{Maths}\label{maths}}
+\section{Maths}\label{maths}
 
 Equations in LaTeX format can be inserted in line, like \(A=\pi r^2\) (code: \texttt{\$A=\textbackslash{}pi\ r\^{}2\$}) or isolated (the \$ are doubled) like \[e^{i \pi} = -1.\]
 
@@ -980,8 +968,7 @@ The numbered equation is created by the following code:
 \end{equation}
 \end{verbatim}
 
-\hypertarget{cross-references}{%
-\section{Cross-references}\label{cross-references}}
+\section{Cross-references}\label{cross-references}
 
 Figures and tables have an automatically generated label, identical to the name of the code snippet prefixed with \texttt{fig:} and \texttt{tab:}.
 
@@ -991,8 +978,7 @@ Sections can be tagged by ending their title with \texttt{\{\#yyy\}}.
 
 In all cases, the call to the reference is made by the command \texttt{\textbackslash{}@ref()}.
 
-\hypertarget{bibliography}{%
-\section{Bibliography}\label{bibliography}}
+\section{Bibliography}\label{bibliography}
 
 Bibliographic references in bibtex format must be included in the \texttt{.bib} file declared in the header of the Markdown document.
 
@@ -1015,8 +1001,7 @@ Several thousand styles are available \footnote{\url{https://github.com/citation
 
 For PDF documents, the bibliography is handled by BibLaTeX, see section \ref{index}.
 
-\hypertarget{forcing-line-breaks}{%
-\section{Forcing line breaks}\label{forcing-line-breaks}}
+\section{Forcing line breaks}\label{forcing-line-breaks}
 
 Hyphenation is handled automatically in LaTeX.
 If a word is not hyphenated correctly, add its hyphenation in the preamble of the file with the command \texttt{hyphenation} (words are separated by spaces, hyphenation locations are represented by dashes).
@@ -1025,8 +1010,7 @@ If LaTeX can't find a solution for the line break, for example because some code
 Do not leave a space before the command.
 The HTML document ignores LaTeX commands.
 
-\hypertarget{sec:languages}{%
-\section{Languages}\label{sec:languages}}
+\section{Languages}\label{sec:languages}
 
 Languages are declared in the document header.
 
@@ -1043,8 +1027,7 @@ The \texttt{\textbackslash{}selectlanguage} command is simply ignored in HTML.
 Language codes are used in the header, such as \texttt{en-US} but language names are necessary in \texttt{\textbackslash{}selectlanguage\{\}}.
 Name matches are listed in table 3 of the polyglossia package documentation\footnote{\url{http://mirrors.ctan.org/macros/unicodetex/latex/polyglossia/polyglossia.pdf}}.
 
-\hypertarget{chapter-summary}{%
-\section{Chapter summary}\label{chapter-summary}}
+\section{Chapter summary}\label{chapter-summary}
 
 The take-home message of each chapter can be displayed in a box, see the beginning of this one.
 The code is that of a code block of type \enquote{Summary}.
@@ -1061,8 +1044,7 @@ Its heading text is set in the header of \texttt{index.Rmd}:
 chaptersummary: In a Nutshell
 \end{verbatim}
 
-\hypertarget{local-table-of-contents}{%
-\section{Local table of contents}\label{local-table-of-contents}}
+\section{Local table of contents}\label{local-table-of-contents}
 
 At the beginning of each chapter of the PDF document, a local table of content can be added with the following code:
 
@@ -1074,15 +1056,14 @@ It is ignored in HTML.
 1 is the depth of the table of contents: sections of the chapters are included.
 It can be changed for 2 to display subsections too, and so on.
 
-\hypertarget{boxed-text}{%
-\section{Boxed text}\label{boxed-text}}
+\section{Boxed text}\label{boxed-text}
 
 Boxed text allows summarizing important points out of the main text.
 An example is given here, to define the Pythagorean theorem.
 
 
 
-\leavevmode\vadjust pre{\hypertarget{pythbox}{}}%
+\phantomsection\label{pythbox}
 \begin{greybox}[frametitle=Pythagorean theorem]
 For a right triangle, if \(c\) denotes the length of the hypotenuse
 and \(a\) and \(b\) denote the lengths of the other two sides, we have
@@ -1150,11 +1131,9 @@ Advanced users can define other colored boxes, say a yellow box, following the n
   In the text, use the same syntax as above but declare the class of the fenced block as \texttt{.yellowbox} instead of \texttt{.greybox}.
 \end{itemize}
 
-\hypertarget{documentation}{%
-\section{Documentation}\label{documentation}}
+\section{Documentation}\label{documentation}
 
-\hypertarget{user-documentation}{%
-\subsection{User documentation}\label{user-documentation}}
+\subsection{User documentation}\label{user-documentation}
 
 \begin{itemize}
 \tightlist
@@ -1165,8 +1144,7 @@ Advanced users can define other colored boxes, say a yellow box, following the n
   The \href{https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf}{R Markdown cheat sheet} for the syntax.
 \end{itemize}
 
-\hypertarget{documentation-for-developers}{%
-\subsection{Documentation for developers}\label{documentation-for-developers}}
+\subsection{Documentation for developers}\label{documentation-for-developers}
 
 \begin{itemize}
 \tightlist
