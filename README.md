@@ -1,4 +1,4 @@
-![rmarkdown](https://github.com/EricMarcon/ci_memoir/workflows/rmarkdown/badge.svg)
+[![Render and Deploy](https://github.com/EricMarcon/ci_memoir/actions/workflows/memoir.yml/badge.svg)](https://github.com/EricMarcon/ci_memoir/actions/workflows/memoir.yml)
 
 # [Memoir template](https://EricMarcon.github.io/ci_memoir/index.html)
 
