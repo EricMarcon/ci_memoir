@@ -1,9 +1,11 @@
+name: Build and Deploy
 on:
   push:
     branches:
       - master
 
-name: rmarkdown
+permissions:
+  contents: write
 
 jobs:
   render:
@@ -17,7 +19,7 @@ jobs:
         uses: r-lib/actions/setup-pandoc@v2
       - name: Install dependencies
         env:
-          GITHUB_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
           options(pkgType = "binary")
           options(install.packages.check.source = "no")
