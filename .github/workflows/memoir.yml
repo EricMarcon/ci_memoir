@@ -51,6 +51,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: render
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
@@ -62,4 +64,4 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ghpages
+          folder: docs
