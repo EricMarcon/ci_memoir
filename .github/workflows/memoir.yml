@@ -29,13 +29,13 @@ jobs:
         shell: Rscript {0}
       - name: Render pdf book
         env:
-          GITHUB_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
           bookdown::render_book("index.Rmd", "bookdown::pdf_book")
         shell: Rscript {0}
       - name: Render gitbook
         env:
-          GITHUB_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
           bookdown::render_book("index.Rmd", "bookdown::bs4_book")
         shell: Rscript {0}
@@ -53,11 +53,10 @@ jobs:
         with:
           name: ghpages
           path: docs
-      - name: Deploy to GitHub Pages
-        uses: Cecilapp/GitHub-Pages-deploy@v3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+      - name: Jekyll
+        run: |
+          touch docs/.nojekyll
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          email: ${{ secrets.EMAIL }}
-          build_dir: docs
-          jekyll: no
+          folder: docs
