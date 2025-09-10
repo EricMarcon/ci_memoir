@@ -1,8 +1,9 @@
-name: Build and Deploy
+name: Render and Deploy
 on:
   push:
     branches:
       - master
+      - main
 
 permissions:
   contents: write
@@ -54,11 +55,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ghpages
-          path: docs
       - name: Jekyll
         run: |
           touch docs/.nojekyll
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: docs
+          folder: ghpages
